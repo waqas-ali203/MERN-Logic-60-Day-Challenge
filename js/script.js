@@ -71,3 +71,15 @@ console.log(a * b);  // 30 (Multiplication)
 console.log(a / b);  // 3.333... (Division)
 console.log(a % b);  // 1 (Remainder)
 console.log(a ** b); // 1000 (Exponentiation a^b)
+
+let nums1 = [5, 10, 15, 20];
+let sum = nums1.reduce((acc, n) => acc + n, 0);
+
+console.log(sum); // 50
+
+
+let nums2 = [1, 2, 3, 4, 5, 6];
+let evens = nums2.filter(n => n % 2 === 0);
+
+console.log(evens); // [2, 4, 6]
+
