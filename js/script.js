@@ -87,3 +87,15 @@ let marks = 75;
 let result = (marks >= 50) ? "Pass" : "Fail";
 console.log(result); // Pass
 
+let num = 5;
+
+console.log(num++); // 5 (pehle print, phir increment)
+console.log(num);   // 6
+
+console.log(++num); // 7 (pehle increment, phir print)
+
+console.log(num--); // 7 (pehle print, phir decrement)
+console.log(num);   // 6
+
+console.log(--num); // 5 (pehle decrement, phir print)
+
