@@ -83,3 +83,7 @@ let evens = nums2.filter(n => n % 2 === 0);
 
 console.log(evens); // [2, 4, 6]
 
+let marks = 75;
+let result = (marks >= 50) ? "Pass" : "Fail";
+console.log(result); // Pass
+
