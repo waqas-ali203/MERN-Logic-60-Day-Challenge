@@ -99,3 +99,10 @@ console.log(num);   // 6
 
 console.log(--num); // 5 (pehle decrement, phir print)
 
+let car = { brand: "Toyota", model: "Corolla" };
+
+car.year = 2023; // add property
+delete car.model; // delete property
+
+console.log(car); // { brand: 'Toyota', year: 2023 }
+
