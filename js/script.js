@@ -116,3 +116,22 @@ function createCounter() {
 
 const counter1 = createCounter();
 console.log(counter1()); // 1
+
+
+class User {
+  #password; // private field (Encapsulation)
+
+  constructor(username, password) {
+    this.username = username;
+    this.#password = password;
+  }
+
+  checkPassword(pass) {
+    return this.#password === pass;
+  }
+}
+
+const user = new User("Waqas", "1234");
+console.log(user.username); // Waqas
+console.log(user.checkPassword("1234")); // true
+console.log(user.#password); // Error (private)
