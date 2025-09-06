@@ -132,6 +132,3 @@ class User {
 }
 
 const user = new User("Waqas", "1234");
-console.log(user.username); // Waqas
-console.log(user.checkPassword("1234")); // true
-console.log(user.#password); // Error (private)
