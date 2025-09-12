@@ -191,3 +191,12 @@ do {
 } while (num <= 5);
 
 
+function processUserInput(callback) {
+  let name = "Ali";
+  callback(name);
+}
+
+// Passing function as an argument
+processUserInput(function(userName) {
+  console.log("Hello, " + userName);
+});
