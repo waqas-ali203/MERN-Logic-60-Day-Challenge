@@ -181,22 +181,3 @@ switch (day) {
 }
 
 console.log(dayName); // Wednesday
-
-
-let num = 1;
-
-do {
-  console.log("Number is:", num);
-  num++;
-} while (num <= 5);
-
-
-function processUserInput(callback) {
-  let name = "Ali";
-  callback(name);
-}
-
-// Passing function as an argument
-processUserInput(function(userName) {
-  console.log("Hello, " + userName);
-});
