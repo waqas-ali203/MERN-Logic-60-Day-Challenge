@@ -180,4 +180,10 @@ switch (day) {
     dayName = "Invalid Day";
 }
 
+
+let ages = [12, 18, 25, 30, 15];
+let adults = ages.filter(age => age >= 18);
+
+console.log(adults); // [18, 25, 30]
+
 console.log(dayName); // Wednesday
