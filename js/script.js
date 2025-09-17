@@ -132,6 +132,4 @@
 // console.log(num--); // 7 (pehle print, phir decrement)
 // console.log(num);   // 6
 
-// console.log(--num); // 5 (pehle decrement, phir print)
-
 
