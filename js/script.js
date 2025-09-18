@@ -129,7 +129,4 @@
 
 // console.log(++num); // 7 (pehle increment, phir print)
 
-// console.log(num--); // 7 (pehle print, phir decrement)
-// console.log(num);   // 6
-
 
