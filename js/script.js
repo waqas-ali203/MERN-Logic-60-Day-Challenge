@@ -120,13 +120,3 @@
 // console.log(result); // Pass
 // console.log(result2); // odd
 
-// Increment / Decrement Operators
-
-// let num = 5;
-
-// console.log(num++); // 5 (pehle print, phir increment)
-// console.log(num);   // 6
-
-// console.log(++num); // 7 (pehle increment, phir print)
-
-
