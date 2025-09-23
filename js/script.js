@@ -112,7 +112,7 @@
 // console.log(age >= 18 || hasID); // true (OR)
 // console.log(!(age >= 18)); // false (NOT)
 
-// Ternary Operator (shortcut of if/else)
+// Ternary Operator  
 
 // let marks = 75;
 // let result = (marks >= 50) ? "Pass" : "Fail";
