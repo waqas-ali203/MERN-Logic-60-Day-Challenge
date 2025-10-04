@@ -1,202 +1,99 @@
-/*      DAY 1   Variables & Data Types */
+//      DAY 1:   JavaScript Basics (Variables, Data Types, Operators)
 
-// Variables
-// var : Purana style, function scope, re-declare ho sakta hai.
 
-// let : Block scope, re-declare nahi ho sakta.
+// Write a JavaScript program that takes the user’s name and age as input, and then uses a template literal to display a personalized introduction message.
 
-// const : Constant value, change nahi hoti.
+// var full_name = "Waqas Ali";
+// var age = 23;
 
-// var x = 10;
-// let y = 20;
-// const z = 30;
-// console.log(x,y,z)
+// console.log(`My name is ${full_name} and My age is ${age}`);
 
-// Redeclare with var
 
-// var  x = 20;
-// var x = 30;
-// console.log(x)   // 30
 
-// let cannot declare
+// Create a JavaScript program that stores 5 numbers in an array and prints the maximum number from that array
 
-// let w = 20;
-// let w = 20;
-// console.log(w)   // w has already declared
 
-// Data Types
+// let max_number = [23,34,78,56];
+// console.log(Math.max(...max_number));  using spread operator bcz  max function will convert array num into string so string is not number ...so spread operator will give us bold value means number as original
 
-// Primitive: [it store actual value in memory] string, number, boolean, null, undefined, symbol, bigint
 
-// let str = "Hello"; // string
-// let num = 42; // number
-// let bool = true; // boolean
-// let und; // undefined
-// let nul = null; // null
-// console.log(typeof str, typeof num, typeof bool, typeof und, typeof nul);
+// Write a JavaScript program that creates an object containing your name, skills, and country. Then, print the object on the screen.
 
-// Reference: [ it store address/reference of the actual value in memory] objects, arrays, functions
+// let person = {
+//   name: "Waqas",
+//   skills: ["HTML", "CSS", "JavaScript", "React"],
+//   country: "Pakistan"
+// };
 
-// let arr = [1, 2, 3];
-// console.log(arr);
-
-// let person = { name: "Ali", age: 22 };
 // console.log(person);
 
-// function greet() {
-//   return "Hello World";
+
+// Create a variable using const and assign it a fixed value. Then, try to update that value and observe the error that occurs.
+
+// const city = "Lahore";
+// city = "Karachi"; 
+// console.log(city);     // we cannot change the reference of a value but in primitive data type we can change the internal values
+
+
+
+//       Day 2: Control Flow (if/else, switch, loops)
+
+
+// Write a JavaScript program that takes a number as input and checks whether the number is positive, negative, or zero.
+
+// var x = -213;
+// if (x > 0 ){
+//   console.log("Your number is positive");
 // }
-// console.log(greet());
-
-// Type Conversion
-
-// Explicit:  Number("123"), String(123)    [ programmer  change manually datatype]
-
-// Implicit: "5" + 2 → "52"  [ JS automatically chnage  kr deta  hu datatype ko ak dosry me ]
-
-/*      DAY 2   Operators & Expressions */
-/*      DAY 2   Operators & Expressions */
-
-// Arithmetic Operators (+, -, *, /, %, **)
-
-// let a = 10;
-// let b = 3;
-
-// console.log(a + b); // 13 (Addition)
-// console.log(a - b); // 7  (Subtraction)
-// console.log(a * b); // 30 (Multiplication)
-// console.log(a / b); // 3.333... (Division)
-// console.log(a % b); // 1 (Remainder)
-// console.log(a ** b); // 1000 (Exponentiation a^b)
-
-// Assignment Operators (=, +=, -=, *=, /=, %=)
-
-// let x = 5;
-// x += 3; // x = x + 3
-// console.log(x); // 8
-
-// x -= 2; // x = x - 2
-// console.log(x); // 6
-
-// x *= 4; // x = x * 4
-// console.log(x); // 24
-
-// x /= 6; // x = x / 6
-// console.log(x); // 4
-
-// x %= 3; // x = x % 3
-// console.log(x); // 1
-
-// Comparison Operators (==, ===, !=, !==, >, <, >=, <=)
-
-// let p = 5;
-// let q = "5";
-
-// console.log(p == q); // true (value check only)
-// console.log(p === q); // false (value + type check)
-
-// console.log(p != q); // false (same value)
-// console.log(p !== q); // true (different type)
-
-// console.log(p > 3); // true
-// console.log(p < 10); // true
-// console.log(p >= 5); // true
-// console.log(p <= 4); // false
-
-// Logical Operators (&&, ||, !)
-
-// let age = 20;
-// let hasID = true;
-
-// console.log(age >= 18 && hasID); // true (AND)
-// console.log(age >= 18 || hasID); // true (OR)
-// console.log(!(age >= 18)); // false (NOT)
-
-// Ternary Operator (shortcut of if/else)
-
-// let marks = 75;
-// let result = (marks >= 50) ? "Pass" : "Fail";
-// let result2 = (marks % 2 == 0) ? "even" : "odd";
-// console.log(result); // Pass
-// console.log(result2); // odd
-
-// Increment / Decrement Operators
-
-// let num = 5;
-
-// console.log(num++); // 5 (pehle print, phir increment)
-// console.log(num);   // 6
-
-// console.log(++num); // 7 (pehle increment, phir print)
-
-// console.log(num--); // 7 (pehle print, phir decrement)
-// console.log(num);   // 6
-
-// console.log(--num); // 5 (pehle decrement, phir print)
-
-/*      DAY 3   Control Flow (if/else, switch, loops) */
-
-// if / else if / else
-
-let marks = 85;
-
-if (marks >= 90) {
-  console.log("Grade A+");
-} else if (marks >= 75) {
-  console.log("Grade A");
-} else if (marks >= 50) {
-  console.log("Grade B");
-} else {
-  console.log("Fail");
-}
+// else if(x<0){
+//   console.log("Your number is negative");
+// }
+// else
+// console.log("Your number is zero");
 
 
-let day = 3;
-let dayName;
+// Write a JavaScript program that takes a student’s marks as input and prints the grade
 
-switch (day) {
-  case 1:
-    dayName = "Monday";
-    break;
-  case 2:
-    dayName = "Tuesday";
-    break;
-  case 3:
-    dayName = "Wednesday";
-    break;
-  case 4:
-    dayName = "Thursday";
-    break;
-  case 5:
-    dayName = "Friday";
-    break;
-  case 6:
-    dayName = "Saturday";
-    break;
-  case 7:
-    dayName = "Sunday";
-    break;
-  default:
-    dayName = "Invalid Day";
-}
+// var marks = 79;
 
-console.log(dayName); // Wednesday
+// if(marks >= 90){
+//   console.log("Your grade is A+")
+// }
+// else if (marks >= 70){
+//   console.log("Your grade is B")
+// }
+// else if(marks >= 33){
+//   console.log("Your grade is D")
+// }
+// else
+//   console.log("Your grade is F")
 
 
-let num = 1;
 
-do {
-  console.log("Number is:", num);
-  num++;
-} while (num <= 5);
+// Write a JavaScript program that uses a for loop to calculate the sum of numbers from 1 to 10.
+
+// let sum=0;
+
+// for(let i=1; i<=10; i++){
+//  sum = sum + i;
+//  console.log(i);
+// }
+//  console.log("Sum of all numbers = ",sum);
 
 
-function processUserInput(callback) {
-  let name = "Ali";
-  callback(name);
-}
 
-// Passing function as an argument
-processUserInput(function(userName) {
-  console.log("Hello, " + userName);
-});
+// Write a JavaScript program that prints all the even numbers from 1 to 20 using a loop.
+
+// for(var i=1; i<=20; i++ ){
+//     if ( i % 2 == 0){
+//         console.log(i)
+//     }
+// }
+
+
+// Write a JavaScript program that prints the multiplication table of a given number (for example, 5) using a loop.
+
+// var table = 5;
+// for(let i=1; i<=10; i++){
+// console.log(`${table} * ${i} = `, table*i)
+// }
