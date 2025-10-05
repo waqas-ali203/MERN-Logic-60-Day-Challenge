@@ -97,3 +97,43 @@
 // for(let i=1; i<=10; i++){
 // console.log(`${table} * ${i} = `, table*i)
 // }
+
+
+
+
+//       DAY 3: Functions in JavaScript
+
+
+// Write a JavaScript function that takes two numbers as input and returns their average.
+
+// function average(a,b){
+//     return (a+b) / 2;
+// }
+// let totalAverage = average(20,10);
+// console.log(totalAverage);
+
+
+// Write a JavaScript function that takes a user’s name and age as input
+
+// function username(name,age){
+
+//     console.log(`My name is ${name} and age is ${age}`)
+// }
+// username('waqas' , '23');
+
+
+// Write a JavaScript function that takes a number as input and checks whether it is even or odd.
+
+// function checkNumber(number){
+//     if(number % 2 == 0){
+//         console.log("Your number is even")
+//     }
+//     else
+//         console.log("Your number is Odd")
+// }
+// checkNumber(56);
+
+
+// Write a JavaScript function that takes a number N as a parameter and calculates the sum of all numbers
+
+// function sum()
