@@ -136,4 +136,38 @@
 
 // Write a JavaScript function that takes a number N as a parameter and calculates the sum of all numbers
 
-// function sum()
+// function sum(num , total){
+//     for(let i=1; i<=10; i++){
+//         let totalNumber = i + total;
+//         console.log(totalNumber);
+//     }
+// }
+// sum(2,3)
+
+
+// Write a JavaScript arrow function that takes a number as input and returns its square.
+
+// var squareNumber = (n) => n*n ;
+// console.log(squareNumber(4));
+
+
+
+//    DAY 4: Arrays + Functions (Advanced Level)
+
+
+// Write a function that takes an array of numbers and returns the sum of all numbers.
+
+// var arr = [2 , 7 , 13];
+// var sumNumbers = arr.reduce((a , b) => a + b , 0)
+// console.log(sumNumbers)
+
+
+// Write a function that takes an array and returns a new array containing only odd numbers.
+
+// var arr = [2,3,7,8,10,27,23]
+// var oddNum = arr.filter( n => n % 2 != 0)
+// console.log(oddNum)
+
+
+
+
