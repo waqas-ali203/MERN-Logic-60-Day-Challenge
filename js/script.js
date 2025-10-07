@@ -157,17 +157,51 @@
 
 // Write a function that takes an array of numbers and returns the sum of all numbers.
 
-// var arr = [2 , 7 , 13];
-// var sumNumbers = arr.reduce((a , b) => a + b , 0)
-// console.log(sumNumbers)
+// function sumArray(arr){
+//     let sum = 0;
+//     for(let i=0; i<arr.length; i++){
+//         sum+= arr[i];
+//     }
+//     return sum;
+// }
+// console.log(sumArray([10,12,23]))
 
 
 // Write a function that takes an array and returns a new array containing only odd numbers.
 
-// var arr = [2,3,7,8,10,27,23]
-// var oddNum = arr.filter( n => n % 2 != 0)
-// console.log(oddNum)
+// function oddNumber(arr){
+//     return arr.filter(num => num % 2 != 0)
+// }
+// console.log(oddNumber([2,23,13,65]))
 
 
+// Write a function that takes an array of strings and returns the longest string.
+
+// function longestArray(arr){
+//     let longest = " ";
+//     for(let str of arr){
+//         if(str.length > longest.length){
+//             longest = str ;
+//         }
+//     }
+//     return longest;
+// }
+// console.log(longestArray(["Ahmad" , "Waqas" , "Ali" , "Zavian"]));
 
 
+// Write a function that takes an array of numbers and returns the maximum and minimum in one object
+
+// function numberMaxMin(arr){
+//     let maxNum = arr[0];
+//     let minNum = arr[0];
+
+//     for(let num of arr){
+//         if(num > maxNum) maxNum = num;
+//         if(num < minNum) minNum = num;
+//     }
+//     return {maxNum , minNum}
+// }
+// console.log(numberMaxMin([12,34,56,90]))
+
+
+// Write a function that removes duplicate values from an array.
