@@ -205,3 +205,83 @@
 
 
 // Write a function that removes duplicate values from an array.
+
+// function removeDuplicate(arr){
+//     let unique = [];
+//     for(let val of arr){
+//         if(!unique.includes(val)){
+//             unique.push(val)
+//         }
+//     }
+//     return unique;
+// }
+// console.log(removeDuplicate([1,2,2,3,4,5,5,6,6]));
+
+
+// Write a function that takes an array and a target number, and checks if the number exists in the array (return true/false)
+
+// function exist( arr , target){
+//     return arr.includes(target);
+// }
+// console.log(exist([3,4,7,10],7));
+
+
+//  Write a function that counts how many even numbers are present in an array.
+
+// function checkEvenNum(arr){
+    //     let evenNum = [];
+    //     for(let val of arr){
+        //         if(val % 2 == 0){
+            //             evenNum.push(val);
+            //         }
+            //     }
+            //     return evenNum.length;
+            // }
+            // console.log(checkEvenNum([3,4,8,12,19,34]));
+            
+            
+            
+//  Write a function that counts how many even numbers are present in an array.
+
+// function checkEvenNum(arr){
+//     let count = 0;
+//     for(let val of arr){
+//         if(val % 2 == 0){
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// console.log(checkEvenNum([3,4,8,12,19,34]));
+
+// Write a function that reverses an array without using reverse() method.
+
+// function reverseArray(arr){
+//     let reverse = [];
+//     for(let i=arr.length-1; i>=0; i--){
+//         reverse.push(arr[i]);
+//     }
+//     return reverse
+// }
+// console.log(reverseArray([2,3,4,5]));
+
+
+// Write a function that takes an array of marks and returns "Pass" if all marks ≥ 33, otherwise "Fail".
+
+// function marks(arr){
+//     for(let val of arr){
+//         if(val < 33){
+//            return "Fail";
+//         }
+//     }
+//     return "Pass";
+// }
+// console.log(marks([23,33,45,11,34]));
+
+
+// Write a function that multiplies all numbers in an array using reduce().
+
+// function multypleAll(arr){
+//     return arr.reduce((a , b) => a*b , 1);
+// }
+// console.log(multypleAll([2,3,12]));
