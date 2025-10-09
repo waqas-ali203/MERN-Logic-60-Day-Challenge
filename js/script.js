@@ -285,3 +285,6 @@
 //     return arr.reduce((a , b) => a*b , 1);
 // }
 // console.log(multypleAll([2,3,12]));
+
+
+//    DAY 5: Objects & Functions
