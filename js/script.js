@@ -1,6 +1,5 @@
 //      DAY 1:   JavaScript Basics (Variables, Data Types, Operators)
 
-
 // Write a JavaScript program that takes the user’s name and age as input, and then uses a template literal to display a personalized introduction message.
 
 // var full_name = "Waqas Ali";
@@ -8,14 +7,10 @@
 
 // console.log(`My name is ${full_name} and My age is ${age}`);
 
-
-
 // Create a JavaScript program that stores 5 numbers in an array and prints the maximum number from that array
-
 
 // let max_number = [23,34,78,56];
 // console.log(Math.max(...max_number));  using spread operator bcz  max function will convert array num into string so string is not number ...so spread operator will give us bold value means number as original
-
 
 // Write a JavaScript program that creates an object containing your name, skills, and country. Then, print the object on the screen.
 
@@ -27,17 +22,13 @@
 
 // console.log(person);
 
-
 // Create a variable using const and assign it a fixed value. Then, try to update that value and observe the error that occurs.
 
 // const city = "Lahore";
-// city = "Karachi"; 
+// city = "Karachi";
 // console.log(city);     // we cannot change the reference of a value but in primitive data type we can change the internal values
 
-
-
 //       Day 2: Control Flow (if/else, switch, loops)
-
 
 // Write a JavaScript program that takes a number as input and checks whether the number is positive, negative, or zero.
 
@@ -50,7 +41,6 @@
 // }
 // else
 // console.log("Your number is zero");
-
 
 // Write a JavaScript program that takes a student’s marks as input and prints the grade
 
@@ -68,8 +58,6 @@
 // else
 //   console.log("Your grade is F")
 
-
-
 // Write a JavaScript program that uses a for loop to calculate the sum of numbers from 1 to 10.
 
 // let sum=0;
@@ -80,8 +68,6 @@
 // }
 //  console.log("Sum of all numbers = ",sum);
 
-
-
 // Write a JavaScript program that prints all the even numbers from 1 to 20 using a loop.
 
 // for(var i=1; i<=20; i++ ){
@@ -90,7 +76,6 @@
 //     }
 // }
 
-
 // Write a JavaScript program that prints the multiplication table of a given number (for example, 5) using a loop.
 
 // var table = 5;
@@ -98,11 +83,7 @@
 // console.log(`${table} * ${i} = `, table*i)
 // }
 
-
-
-
 //       DAY 3: Functions in JavaScript
-
 
 // Write a JavaScript function that takes two numbers as input and returns their average.
 
@@ -112,7 +93,6 @@
 // let totalAverage = average(20,10);
 // console.log(totalAverage);
 
-
 // Write a JavaScript function that takes a user’s name and age as input
 
 // function username(name,age){
@@ -120,7 +100,6 @@
 //     console.log(`My name is ${name} and age is ${age}`)
 // }
 // username('waqas' , '23');
-
 
 // Write a JavaScript function that takes a number as input and checks whether it is even or odd.
 
@@ -133,7 +112,6 @@
 // }
 // checkNumber(56);
 
-
 // Write a JavaScript function that takes a number N as a parameter and calculates the sum of all numbers
 
 // function sum(num , total){
@@ -144,16 +122,12 @@
 // }
 // sum(2,3)
 
-
 // Write a JavaScript arrow function that takes a number as input and returns its square.
 
 // var squareNumber = (n) => n*n ;
 // console.log(squareNumber(4));
 
-
-
 //    DAY 4: Arrays + Functions (Advanced Level)
-
 
 // Write a function that takes an array of numbers and returns the sum of all numbers.
 
@@ -166,14 +140,12 @@
 // }
 // console.log(sumArray([10,12,23]))
 
-
 // Write a function that takes an array and returns a new array containing only odd numbers.
 
 // function oddNumber(arr){
 //     return arr.filter(num => num % 2 != 0)
 // }
 // console.log(oddNumber([2,23,13,65]))
-
 
 // Write a function that takes an array of strings and returns the longest string.
 
@@ -187,7 +159,6 @@
 //     return longest;
 // }
 // console.log(longestArray(["Ahmad" , "Waqas" , "Ali" , "Zavian"]));
-
 
 // Write a function that takes an array of numbers and returns the maximum and minimum in one object
 
@@ -203,7 +174,6 @@
 // }
 // console.log(numberMaxMin([12,34,56,90]))
 
-
 // Write a function that removes duplicate values from an array.
 
 // function removeDuplicate(arr){
@@ -217,7 +187,6 @@
 // }
 // console.log(removeDuplicate([1,2,2,3,4,5,5,6,6]));
 
-
 // Write a function that takes an array and a target number, and checks if the number exists in the array (return true/false)
 
 // function exist( arr , target){
@@ -225,22 +194,19 @@
 // }
 // console.log(exist([3,4,7,10],7));
 
-
 //  Write a function that counts how many even numbers are present in an array.
 
 // function checkEvenNum(arr){
-    //     let evenNum = [];
-    //     for(let val of arr){
-        //         if(val % 2 == 0){
-            //             evenNum.push(val);
-            //         }
-            //     }
-            //     return evenNum.length;
-            // }
-            // console.log(checkEvenNum([3,4,8,12,19,34]));
-            
-            
-            
+//     let evenNum = [];
+//     for(let val of arr){
+//         if(val % 2 == 0){
+//             evenNum.push(val);
+//         }
+//     }
+//     return evenNum.length;
+// }
+// console.log(checkEvenNum([3,4,8,12,19,34]));
+
 //  Write a function that counts how many even numbers are present in an array.
 
 // function checkEvenNum(arr){
@@ -265,7 +231,6 @@
 // }
 // console.log(reverseArray([2,3,4,5]));
 
-
 // Write a function that takes an array of marks and returns "Pass" if all marks ≥ 33, otherwise "Fail".
 
 // function marks(arr){
@@ -278,14 +243,12 @@
 // }
 // console.log(marks([23,33,45,11,34]));
 
-
 // Write a function that multiplies all numbers in an array using reduce().
 
 // function multypleAll(arr){
 //     return arr.reduce((a , b) => a*b , 1);
 // }
 // console.log(multypleAll([2,3,12]));
-
 
 //    DAY 5: Objects & Functions
 
@@ -300,9 +263,7 @@
 // console.log(book.title)
 // console.log(book["pages"])
 
-
 // Add a method to book that prints a short summary.
-
 
 // let book = {
 //     title : "The great Learner",
@@ -314,14 +275,12 @@
 // }
 // book.summary();
 
-
 // Write a function square(num) that returns the square of a number.
 
 // function square(num){
 //     return num*num;
 // }
 // console.log(square(3));
-
 
 // Write a function that takes two numbers and returns the greater one.
 
@@ -333,10 +292,9 @@
 //         console.log(`${b} is greater`);
 
 //     return maxNum;
-        
+
 // }
 // maxNum(34,5);
-
 
 // Create an object employee with salary and a method to increase it by 10%.
 
@@ -350,9 +308,7 @@
 // }
 // console.log(employe.updatesalary());
 
-
 // Write a function that counts total keys in an object.
-
 
 // let employe = {
 //    fullname : "waqas",
@@ -368,7 +324,6 @@
 // }
 
 // console.log(numOfKeys());
-
 
 // Create an object product and add a method to calculate discount price.
 
@@ -390,7 +345,6 @@
 
 // console.log(product.productDiscount());
 
-
 // Write a function that checks if a given property exists in an object or not.
 
 // let employe = {
@@ -403,5 +357,49 @@
 // }
 
 // console.log("job" in employe);    1st method  by using in operator
-
 // console.log(employe.hasOwnProperty("job"));    2nd method by using hasownProperty method
+
+// DAY 6: Arrays + Objects + Functions (Advanced Logic Build)
+
+// Ceate an array of 5 employees (each with name, salary, department).
+
+// let employeData = [
+//     {name : "Waqas" , salary : 500000 , department : "Software engineer"} ,
+//     {name : "Hannan" , salary : 700000 , department : "Data science"} ,
+//     {name : "Ammar" , salary : 600000 , department : "Artificial Intelligence"}
+// ]
+
+// Print only employee names using forEach().
+
+// let employeData = [
+//     {name : "Waqas" , salary : 500000 , department : "Software engineer"} ,
+//     {name : "Hannan" , salary : 700000 , department : "Data science"} ,
+//     {name : "Ammar" , salary : 600000 , department : "Artificial Intelligence"}
+// ]
+
+// employeData.forEach(emp => {
+//     console.log(emp.name);
+// });
+
+// Filter all employees with salary > 500000.
+
+// let employeData = [
+//   { name: "Waqas", salary: 500000, department: "Software engineer" },
+//   { name: "Hannan", salary: 700000, department: "Data science" },
+//   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
+// ];
+
+// let highestSalary = employeData.filter((emp) => emp.salary > 500000);
+// console.log(highestSalary)
+
+
+// Find the employee who works in “IT” department.
+
+// let employeData = [
+//   { name: "Waqas", salary: 500000, department: "IT" },
+//   { name: "Hannan", salary: 700000, department: "Data science" },
+//   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
+// ];
+
+// let worker_IT = employeData.filter( emp => emp.department === "IT");
+// console.log(worker_IT)
