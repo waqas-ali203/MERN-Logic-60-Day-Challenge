@@ -288,5 +288,120 @@
 
 
 //    DAY 5: Objects & Functions
-//    DAY 5: Objects & Functions
 
+// Create an object named book with properties: title, author, pages.
+
+// let book = {
+//     title : "The great Learner",
+//     author : "Waqas ali",
+//     pages : "34"
+// }
+// console.log(book)
+// console.log(book.title)
+// console.log(book["pages"])
+
+
+// Add a method to book that prints a short summary.
+
+
+// let book = {
+//     title : "The great Learner",
+//     author : "Waqas ali",
+//     pages : "34",
+//     summary : function (){
+//         console.log(`This book ${this.title} is written by ${this.author} with ${this.pages} pages`)
+//     }
+// }
+// book.summary();
+
+
+// Write a function square(num) that returns the square of a number.
+
+// function square(num){
+//     return num*num;
+// }
+// console.log(square(3));
+
+
+// Write a function that takes two numbers and returns the greater one.
+
+// function maxNum(a,b){
+//     if(a>b){
+//         console.log(`${a} is greater`);
+//     }
+//     else
+//         console.log(`${b} is greater`);
+
+//     return maxNum;
+        
+// }
+// maxNum(34,5);
+
+
+// Create an object employee with salary and a method to increase it by 10%.
+
+// let employe = {
+//    fullname : "waqas",
+//    job : "Software Engineer",
+//    oldSalary : 400000,
+//    updatesalary : function() {
+//     return this.oldSalary + (this.oldSalary * 0.10);
+//    }
+// }
+// console.log(employe.updatesalary());
+
+
+// Write a function that counts total keys in an object.
+
+
+// let employe = {
+//    fullname : "waqas",
+//    job : "Software Engineer",
+//    oldSalary : 400000,
+//    updatesalary : function() {
+//     return this.oldSalary + (this.oldSalary * 0.10);
+//    }
+// }
+
+// function numOfKeys(){
+//     return Object.keys(employe).length;
+// }
+
+// console.log(numOfKeys());
+
+
+// Create an object product and add a method to calculate discount price.
+
+// let product = {
+//     productName : "Cooking oil",
+//     productQuality : "High",
+//     productPrice : 456,
+//     productDiscount : function (){
+//         if (this.productPrice > 400){
+//             console.log("Thsi is discount Product")
+//             return this.productPrice - (this.productPrice * 0.05);
+//         }
+//         else {
+//             console.log("Thsi is not  discount Product")
+//             return this.productPrice ;
+//         }
+//     }
+// }
+
+// console.log(product.productDiscount());
+
+
+// Write a function that checks if a given property exists in an object or not.
+
+// let employe = {
+//    fullname : "waqas",
+//    job : "Software Engineer",
+//    oldSalary : 400000,
+//    updatesalary : function() {
+//     return this.oldSalary + (this.oldSalary * 0.10);
+//    }
+// }
+
+// console.log("job" in employe);    1st method  by using in operator
+
+// console.log(employe.hasOwnProperty("job"));    2nd method by using hasownProperty method
