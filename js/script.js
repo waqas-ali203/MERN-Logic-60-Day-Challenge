@@ -403,3 +403,88 @@
 
 // let worker_IT = employeData.filter( emp => emp.department === "IT");
 // console.log(worker_IT)
+
+
+// Create a function that returns total salary of all employees.
+
+// let employeData = [
+//   { name: "Waqas", salary: 500000, department: "IT" },
+//   { name: "Hannan", salary: 700000, department: "Data science" },
+//   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
+// ];
+
+// function totalEmployeSalary(employess){
+    //     return employess.reduce((sum , emp) => sum + emp.salary , 0)
+    // }
+    // console.log(totalEmployeSalary(employeData)) 
+    
+    
+    // Use map() to make a new array of all employee names in uppercase.
+    
+    // let employeData = [
+    //   { name: "Waqas", salary: 500000, department: "IT" },
+    //   { name: "Hannan", salary: 700000, department: "Data science" },
+    //   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
+    // ];
+
+    // let upper_Case = employeData.map(emp => emp.name.toUpperCase());
+    // console.log(upper_Case)
+
+
+// Sort employees by salary (highest → lowest).
+
+// let employeData = [
+//   { name: "Waqas", salary: 500000, department: "IT" },
+//   { name: "Hannan", salary: 700000, department: "Data science" },
+//   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
+// ];
+
+// let salaryRange = employeData.sort((a , b) => b.salary - a.salary);
+// console.log(salaryRange)
+
+
+// Add 10% bonus to each employee salary (using map()).
+
+// let employeData = [
+//   { name: "Waqas", salary: 500000, department: "IT" },
+//   { name: "Hannan", salary: 700000, department: "Data science" },
+//   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
+// ];
+
+
+// let addBonus = employeData.map(emp => emp.salary + (emp.salary * 0.10))
+// console.log(addBonus)
+
+
+
+
+// Day 7: Arrays + Map + Reduce + Deep Logic Building (Mini Real-World Practice)
+
+
+// Create an array of numbers and return a new array with each number squared using map().
+
+
+// let numbers = [ 3 , 4, 5 , 11]
+// let square_Number = numbers.map(num => num*num);
+// console.log(square_Number)
+
+// Create an array of student marks and filter those who scored more than 80.
+
+// let marks = [34 , 43, 66, 90 , 88 , 56, 82]
+// let topper = marks.filter(mark => mark >= 80);
+// console.log(topper)
+
+
+// Create an array of employees (name, salary) and use reduce() to find total salary.
+
+// Use find() to get the first student who scored exactly 100 marks.
+
+// Use forEach() to print all car names from an array.
+
+// Create an array of products and increase each price by 15% using map().
+
+// Create an array of expenses and use reduce() to calculate total spending.
+
+// Filter all even numbers from [12, 45, 33, 90, 24, 11].
+
+// Find first number greater than 50 from the above array.                        All done before
