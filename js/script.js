@@ -488,3 +488,11 @@
 // Filter all even numbers from [12, 45, 33, 90, 24, 11].
 
 // Find first number greater than 50 from the above array.                        All done before
+
+
+
+
+// DAY 8 — “Advanced JavaScript Foundations”  (Nested Objects, Nested Arrays, Destructuring, and Spread Operator)
+// DAY 8 — “Advanced JavaScript Foundations”  (Nested Objects, Nested Arrays, Destructuring, and Spread Operator)
+
+
