@@ -493,6 +493,49 @@
 
 
 // DAY 8 — “Advanced JavaScript Foundations”  (Nested Objects, Nested Arrays, Destructuring, and Spread Operator)
-// DAY 8 — “Advanced JavaScript Foundations”  (Nested Objects, Nested Arrays, Destructuring, and Spread Operator)
 
 
+// Create an object student with nested object address and print the city.
+
+// let student = {
+//     Name : "zain",
+//     class : "IT",
+//     city : {
+//         permanent_City : "Faisalabad",
+//         Temprary_City : "Lahore"
+//     }
+// }
+
+// console.log(student.city.permanent_City)
+
+
+// Make an array of 3 users (name, email, city) and print the email of the second user.
+
+// let users = [{name : "zain", email : "zain@gmail.com" , city : "fasialabad"},{name : "waqas", email : "waqas@gmail.com" , city : "Lahore"},{name : "Waris", email : "waris@gmail.com" , city : "Multan"}]
+// let {email} = users;
+// console.log(users[1].email)
+
+
+// Use array destructuring to extract first and last fruit from an array.
+
+// let fruits = ["Banana" , "Apple" , "Orange" , "Guava"]
+// let [first , , , last] = fruits;
+// console.log(first , last)
+
+
+// Copy one array into another using spread operator.
+
+// let fruits = ["apple" , "banana"];
+// let vegetabels = ["potato" , "pumpkin"]
+
+// let combined = [[...fruits , ...vegetabels]]
+// console.log(combined)
+
+
+// Use rest operator in a function to calculate product of all numbers passed.
+
+// function productAll(...num){
+//    return num.reduce((first , last) => first * last , 1)
+    
+// }
+// console.log(productAll(2,3,4,32))
