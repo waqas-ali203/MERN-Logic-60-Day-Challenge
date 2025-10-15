@@ -539,3 +539,41 @@
     
 // }
 // console.log(productAll(2,3,4,32))
+
+
+// DAY 9 – Higher-Order Functions & Callbacks
+
+
+// Write a function printMessage(callback) that prints "Starting...", waits 1 second, then runs the callback "Finished!".
+
+// function printMessage(callback){
+//     console.log("Starting")
+//     setTimeout(()=>{
+//         // console.log("processing");
+//         callback();
+//     },1000)
+// }
+// printMessage(() => console.log("Finished"));
+
+
+// Make a calculator function that accepts two numbers and a callback (add, subtract, multiply, divide).
+
+// function calculator(num1 , num2 , operation){
+//     return operation(num1 , num2)
+// }
+// function add(num1 , num2){
+//     return num1 + num2 ;
+// }
+// function subtract(num1 , num2){
+//     return num1 - num2 ;
+// }
+// function multiply(num1 , num2){
+//     return num1 * num2 ;
+// }
+// function dividion(num1 , num2){
+//     return num1 / num2 ;
+// }
+// console.log(calculator(2 , 4 , add))
+
+
+// Write a custom function repeatAction(n, callback) that calls the callback n times.
