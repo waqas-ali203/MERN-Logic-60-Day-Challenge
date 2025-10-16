@@ -573,7 +573,8 @@
 // function dividion(num1 , num2){
 //     return num1 / num2 ;
 // }
-// console.log(calculator(2 , 4 , add))
+// console.log(calculator(2 , 4 , add))    // Skip this topic because all questions are same like callabck this question
 
 
-// Write a custom function repeatAction(n, callback) that calls the callback n times.
+
+// DAY 10 – Higher-Order Functions in Action: map(), filter(), and reduce()
