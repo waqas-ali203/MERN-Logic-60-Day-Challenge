@@ -392,7 +392,6 @@
 // let highestSalary = employeData.filter((emp) => emp.salary > 500000);
 // console.log(highestSalary)
 
-
 // Find the employee who works in “IT” department.
 
 // let employeData = [
@@ -404,7 +403,6 @@
 // let worker_IT = employeData.filter( emp => emp.department === "IT");
 // console.log(worker_IT)
 
-
 // Create a function that returns total salary of all employees.
 
 // let employeData = [
@@ -414,22 +412,20 @@
 // ];
 
 // function totalEmployeSalary(employess){
-    //     return employess.reduce((sum , emp) => sum + emp.salary , 0)
-    // }
-    // console.log(totalEmployeSalary(employeData)) 
-    
-    
-    // Use map() to make a new array of all employee names in uppercase.
-    
-    // let employeData = [
-    //   { name: "Waqas", salary: 500000, department: "IT" },
-    //   { name: "Hannan", salary: 700000, department: "Data science" },
-    //   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
-    // ];
+//     return employess.reduce((sum , emp) => sum + emp.salary , 0)
+// }
+// console.log(totalEmployeSalary(employeData))
 
-    // let upper_Case = employeData.map(emp => emp.name.toUpperCase());
-    // console.log(upper_Case)
+// Use map() to make a new array of all employee names in uppercase.
 
+// let employeData = [
+//   { name: "Waqas", salary: 500000, department: "IT" },
+//   { name: "Hannan", salary: 700000, department: "Data science" },
+//   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
+// ];
+
+// let upper_Case = employeData.map(emp => emp.name.toUpperCase());
+// console.log(upper_Case)
 
 // Sort employees by salary (highest → lowest).
 
@@ -442,7 +438,6 @@
 // let salaryRange = employeData.sort((a , b) => b.salary - a.salary);
 // console.log(salaryRange)
 
-
 // Add 10% bonus to each employee salary (using map()).
 
 // let employeData = [
@@ -451,18 +446,12 @@
 //   { name: "Ammar", salary: 600000, department: "Artificial Intelligence" },
 // ];
 
-
 // let addBonus = employeData.map(emp => emp.salary + (emp.salary * 0.10))
 // console.log(addBonus)
 
-
-
-
 // Day 7: Arrays + Map + Reduce + Deep Logic Building (Mini Real-World Practice)
 
-
 // Create an array of numbers and return a new array with each number squared using map().
-
 
 // let numbers = [ 3 , 4, 5 , 11]
 // let square_Number = numbers.map(num => num*num);
@@ -473,7 +462,6 @@
 // let marks = [34 , 43, 66, 90 , 88 , 56, 82]
 // let topper = marks.filter(mark => mark >= 80);
 // console.log(topper)
-
 
 // Create an array of employees (name, salary) and use reduce() to find total salary.
 
@@ -489,11 +477,7 @@
 
 // Find first number greater than 50 from the above array.                        All done before
 
-
-
-
 // DAY 8 — “Advanced JavaScript Foundations”  (Nested Objects, Nested Arrays, Destructuring, and Spread Operator)
-
 
 // Create an object student with nested object address and print the city.
 
@@ -508,20 +492,17 @@
 
 // console.log(student.city.permanent_City)
 
-
 // Make an array of 3 users (name, email, city) and print the email of the second user.
 
 // let users = [{name : "zain", email : "zain@gmail.com" , city : "fasialabad"},{name : "waqas", email : "waqas@gmail.com" , city : "Lahore"},{name : "Waris", email : "waris@gmail.com" , city : "Multan"}]
 // let {email} = users;
 // console.log(users[1].email)
 
-
 // Use array destructuring to extract first and last fruit from an array.
 
 // let fruits = ["Banana" , "Apple" , "Orange" , "Guava"]
 // let [first , , , last] = fruits;
 // console.log(first , last)
-
 
 // Copy one array into another using spread operator.
 
@@ -531,18 +512,15 @@
 // let combined = [[...fruits , ...vegetabels]]
 // console.log(combined)
 
-
 // Use rest operator in a function to calculate product of all numbers passed.
 
 // function productAll(...num){
 //    return num.reduce((first , last) => first * last , 1)
-    
+
 // }
 // console.log(productAll(2,3,4,32))
 
-
 // DAY 9 – Higher-Order Functions & Callbacks
-
 
 // Write a function printMessage(callback) that prints "Starting...", waits 1 second, then runs the callback "Finished!".
 
@@ -554,7 +532,6 @@
 //     },1000)
 // }
 // printMessage(() => console.log("Finished"));
-
 
 // Make a calculator function that accepts two numbers and a callback (add, subtract, multiply, divide).
 
@@ -575,6 +552,56 @@
 // }
 // console.log(calculator(2 , 4 , add))    // Skip this topic because all questions are same like callabck this question
 
-
-
 // DAY 10 – Higher-Order Functions in Action: map(), filter(), and reduce()
+
+// Use map() to create a new array that doubles all numbers in [3, 6, 9, 12].
+
+// let arr = [3, 6, 9, 12];
+// let double = arr.map(num => num* 2);
+// console.log(double)
+
+// Use filter() to get all even numbers from [1,2,3,4,5,6,7,8].
+
+// let numbers = [1,2,3,4,5,6,7,8];
+// let even_Numbers = numbers.filter(num => num % 2 == 0);
+// console.log(even_Numbers)
+
+// Use reduce() to find the product of all numbers in [1,2,3,4,5].
+
+// let num = [1,2,3,4,5];
+// let product = num.reduce((first_Num , second_Num) => first_Num * second_Num , 1);
+// console.log(product)
+
+// Given [{name:"Ali",age:20},{name:"Ammar",age:25}], use map() to extract names only.
+
+// let students = [{name:"Ali",age:20},{name:"Ammar",age:25}];
+// let std_Names = students.map(fullname => fullname.name)
+// console.log(std_Names)
+
+// From [10,15,20,25,30], filter numbers > 20 and double them using chaining.
+
+// let arr = [10, 15, 20, 25, 30];
+// let result = arr.filter((num) => num > 20).map((num) => num + num);
+// console.log(result);
+
+// Calculate total marks of all students using reduce().
+
+// let arr = [{name : "waqas" , marks : 40}, {name : "Ammar" , marks : 90}, {name : "asad" , marks : 70}];
+// let total_Marks = arr.reduce((num , mar) => num + mar.marks,0);
+// console.log(total_Marks)
+
+// Combine map() + filter() + reduce() to find the sum of all even numbers after doubling them.
+
+// let arr = [34, 23, 56, 12, 7, 19, 23, 44, 38];
+// let result = arr
+//   .filter((num) => num % 2 == 0)
+//   .map((num) => num * 2)
+//   .reduce((sum, num) => sum + num, 0);
+// console.log(result);
+
+
+// Given prices=[200,400,600], use map() to apply 10% discount and print new prices.
+
+// let prices = [200,400,600];
+// let discount = prices.map(num => num - (num * 0.10));
+// console.log(discount)
