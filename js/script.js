@@ -605,3 +605,93 @@
 // let prices = [200,400,600];
 // let discount = prices.map(num => num - (num * 0.10));
 // console.log(discount)
+
+
+// DAY 11 — JavaScript: Asynchronous Programming (Callbacks, Promises, async/await)
+
+// Use setTimeout to print "Welcome" after 3 seconds.
+
+// setTimeout(() =>{
+//     console.log("Welcome");
+// },3000);
+
+// Write a function that prints numbers 1 to 5, each after 1 second.
+
+// function printNum(){
+//     for(let i=1 ; i<=5 ; i++){
+//          setTimeout(() => {
+//         console.log(i)
+//     },i*1000)  // i*1000 because every number will display after iteration with delay ....if we write just time then only whole output will be show afetr 1 sec delay
+//     }
+   
+// }
+// printNum();
+
+
+// Write an async/await version of file downloading.
+
+// function fileDowloand(){
+//     return new Promise(resolve =>{
+//         setTimeout(() => {
+//             resolve("Dowloand File successfully")
+//         },2000)
+//     })
+// }
+
+// async function getFile() {
+//     console.log("Selecting File for Dowloand...");
+//     let message = await fileDowloand();
+//     console.log(message);
+// }
+// getFile();
+
+
+// Create two promises task1 and task2 that complete in different times — use Promise.all() to wait for both.
+
+// function Task1(){
+//     return new Promise(resolve =>{
+//         setTimeout(() =>{
+//             resolve("Task 1 complete");
+//         },2000)
+//     })
+// }
+// function Task2(){
+//     return new Promise(resolve =>{
+//         setTimeout(() =>{
+//             resolve("Task 2 complete");
+//         },4000)
+//     })
+// }
+// Promise.all([Task1() , Task2()])     // promise.all   means it will give all promise data if one fail then other all fail ...if all will get data then output will show
+// .then(result => console.log(result))
+// .catch(error => console.log(error));
+
+
+// Use Promise.race() to show whichever finishes first.
+
+// function fetchData(){
+//     return new Promise(resolve =>{
+//         setTimeout(() =>{
+//             resolve("Data fetch successfuly");
+//         },4000)
+//     })
+// }
+// function timeOut(){
+//     return new Promise(reject =>{
+//         setTimeout(() =>{
+//             reject("Server time Reachout!");
+//         },2000)
+//     })
+// }
+// Promise.race([fetchData() , timeOut()])    // Promise.race() returns the result of the fastest promise.In real use, it's helpful when fetching data — if the server is slow, we add a timeout promise so it shows “Request Timeout” if data doesn’t arrive in time.
+// .then(result => console.log(result))
+// .catch(error => console.log(error));
+
+
+// Simulate an API call that fails 50% of the time (random boolean). Handle it with try/catch.
+
+function getData(){
+    return new Promise((resolve) => {
+        if(Math.random()*2)
+    })
+}
