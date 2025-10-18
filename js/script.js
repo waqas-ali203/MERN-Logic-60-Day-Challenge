@@ -695,3 +695,10 @@ function getData(){
         if(Math.random()*2)
     })
 }
+
+
+function getData(){
+    return new Promise((resolve) => {
+        if(Math.random()*2)
+    })
+}
