@@ -745,3 +745,49 @@
 
 // DAY 12 — JavaScript Error Handling + Debugging (try...catch, throw, finally, console tools)
 
+// (try , catch , finally , throw )  it is done in up code
+
+
+// Debugging means finding and fixing errors in your code.
+
+// Tools:
+
+// console.log() — to trace variable values
+
+// Browser Developer Tools → Sources → “Add breakpoint”
+
+// Use debugger; keyword to pause execution manually
+
+
+
+// Write code that tries to divide two numbers and catches divide-by-zero error.
+
+// function divide(a,b){
+//     if (b === 0){
+//         throw new Error("Divide cannot on zero");
+//     }
+//     return a / b;
+// }
+// try {
+//     let result = divide(10 ,0)
+//     console.log("This is result" , result)
+// } catch (error) {
+//     console.log("erro" , error.message)
+// }
+
+
+// Create a function parseJSON(str) that safely parses JSON and catches syntax errors.
+
+// function parseJSON(str){
+//     try {
+//         let data = JSON.parse(str);
+//         console.log("Parse Successfuly" , data)
+//     } catch (error) {
+//         console.log("Invalid jSON" , error.message)
+//     }
+// }
+// parseJSON('{"name":"waqas" , "age" : 23}')
+
+
+
+// Day 13 — JavaScript: Async/Await + Error Handling
