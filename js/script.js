@@ -599,13 +599,11 @@
 //   .reduce((sum, num) => sum + num, 0);
 // console.log(result);
 
-
 // Given prices=[200,400,600], use map() to apply 10% discount and print new prices.
 
 // let prices = [200,400,600];
 // let discount = prices.map(num => num - (num * 0.10));
 // console.log(discount)
-
 
 // DAY 11 — JavaScript: Asynchronous Programming (Callbacks, Promises, async/await)
 
@@ -623,10 +621,9 @@
 //         console.log(i)
 //     },i*1000)  // i*1000 because every number will display after iteration with delay ....if we write just time then only whole output will be show afetr 1 sec delay
 //     }
-   
+
 // }
 // printNum();
-
 
 // Write an async/await version of file downloading.
 
@@ -644,7 +641,6 @@
 //     console.log(message);
 // }
 // getFile();
-
 
 // Create two promises task1 and task2 that complete in different times — use Promise.all() to wait for both.
 
@@ -666,7 +662,6 @@
 // .then(result => console.log(result))
 // .catch(error => console.log(error));
 
-
 // Use Promise.race() to show whichever finishes first.
 
 // function fetchData(){
@@ -687,11 +682,66 @@
 // .then(result => console.log(result))
 // .catch(error => console.log(error));
 
-
 // Simulate an API call that fails 50% of the time (random boolean). Handle it with try/catch.
 
-function getData(){
-    return new Promise((resolve) => {
-        if(Math.random()*2)
-    })
-}
+// function fakeApiCall(){
+//     return new Promise((resolve , reject) => {
+//         let success = Math.random() > 0.5 ;
+//         console.log(success)
+//         setTimeout(() =>{
+//             if(success){
+//                 resolve("Data Fetch Successfuly");
+//             }
+//             else{
+//                 reject("Error Fetching Data");
+//             }
+//         },2000)
+//     })
+// }
+
+// async function getData() {
+//     try {
+//         let result = await fakeApiCall();
+//         console.log(result);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// getData();
+
+
+// Chain 3 async operations (user → orders → order details) using async/await.
+
+// function getUser() {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve({ id: 1 , name: "waqas" }),1000)
+//   );
+// }
+// function getOrder(userId) {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve(["order1" , "order2" , "order3"]),1000)
+//   );
+// }
+// function getOrderDetail(order) {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve({ order , details : "Delivered on time"}),1000)
+//   );
+// }
+
+// async function showUserOrderDetail() {
+//     console.log("Order Detail Fetching.....");
+//     const user = await getUser();
+    
+//     console.log("Fetching Order for" , user.name);
+//     const order = await getOrder(user.id);
+
+//     console.log("Fetching Order Detail" , order[0])
+//     const orderDetail = await getOrderDetail(order[0]);
+//     console.log("Final Result" , orderDetail)
+// }
+// showUserOrderDetail();
+
+
+
+// DAY 12 — JavaScript Error Handling + Debugging (try...catch, throw, finally, console tools)
+
