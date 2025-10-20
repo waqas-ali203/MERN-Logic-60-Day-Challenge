@@ -791,3 +791,123 @@
 
 
 // Day 13 — JavaScript: Async/Await + Error Handling
+
+// Create a promise that resolves after 3 seconds with "Download complete". Use async/await to wait and print it.
+
+// function dowloandFile(){
+//     return new Promise((resolve) => setTimeout(()=>{
+//         resolve("Dowloand Complete")
+//     },3000))
+// }
+// async function tryDowloand() {
+//     console.log("Dowloanding File .....")
+//     let user = await dowloandFile();
+//     console.log(user);
+// }
+// tryDowloand();
+
+
+// simulate an API call that fails 50% of the time (randomly).
+
+// function fakeApiCall(){
+//     return new Promise((resolve , reject) => setTimeout(()=>{
+//         let success = Math.random() > 0.5 ;
+//         if(success){
+//             resolve("Fetch Api Successfully");
+//         }
+//         else{
+//             reject("Fetch Api Failed");
+//         }
+//     },2000))
+// }
+
+// async function getApi() {
+//   console.log("Please I'm working on Api...");
+//   try {
+//     let user = await fakeApiCall();
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// getApi();
+
+
+// Run 2 async tasks (taskA = 2s, taskB = 3s) together using Promise.all().
+
+// function task1(){
+//     return new Promise((resolve) => setTimeout(()=>{
+//         resolve("Task 1 complete Successfully")
+//     },2000))
+// };
+// function task2(){
+//     return new Promise((resolve) => setTimeout(()=>{
+//         resolve("Task 2 complete Successfully")
+//     },3000))
+// };
+
+// async function all_Promise() {
+//     console.log("Wait please we are working on your tasks.....")
+//     let result = await Promise.all([task1() , task2()]);
+//     console.log(result)
+// }
+// all_Promise();
+
+
+// Create fakeLogin() that sometimes rejects. Use finally() to always print "Session Ended".
+
+
+//  function fakeLogin(){
+//     return new Promise((resolve , reject) => setTimeout(()=>{
+//         let success = Math.random() > 0.5 ;
+//         if(success){
+//             resolve("Fetch Api Successfully");
+//         }
+//         else{
+//             reject("Fetch Api Failed");
+//         }
+//     },2000))
+// }
+
+// async function getApi() {
+//   console.log("Please I'm working on Api...");
+//   try {
+//     let user = await fakeLogin();
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+//   finally{
+//     console.log("Session End")
+//   }
+// }
+// getApi();
+
+
+
+// Chain 2 async functions — getUser() and getPosts() — where second waits for the first.
+
+
+async function getUser(){
+    return new Promise(resolve => setTimeout(() =>{
+        resolve({id : 1 , name : "waqas"})
+    },2000))
+}
+
+async function getPost(userId){
+    return new Promise(resolve => setTimeout(() =>{
+        resolve(["Post1" , "Post2" , "Post3"])
+    },3000))
+}
+
+async function showUserPost() {
+    console.log("Fetching User.....");
+    let user = await getUser();
+    console.log("Wait for user" , user.name);
+
+    console.log("Fetching User Post" , user.name);
+    let userPost = await getPost(user.id);
+    console.log("Post" , userPost)
+}
+
+showUserPost();
