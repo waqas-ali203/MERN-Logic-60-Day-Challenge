@@ -901,20 +901,179 @@
 // Create 3 promises that resolve at different times. Chain them one after another using .then().
 
 
-function getUser(){
-    return new Promise((resolve) => setTimeout((){
-        resolve("Get User successfully")
-    },1000))
-}
-function confirmOrder(){
-    return new Promise((resolve) => setTimeout((){
-        resolve("Fetch Order Successfully")
-    },1000))
-}
-function deliverOrder(){
-    return new Promise((resolve) => setTimeout((){
-        resolve("GDeliver Order successfully")
-    },1000))
-}
+// function getUser(){
+//     return new Promise((resolve) => setTimeout(() => {
+//         resolve("Get User successfully")
+//     },1000))
+// }
+// function confirmOrder(){
+//     return new Promise((resolve) => setTimeout(() => {
+//         resolve("Fetch Order Successfully")
+//     },2000))
+// }
+// function deliverOrder(){
+//     return new Promise((resolve) => setTimeout(() =>{
+//         resolve("Deliver Order successfully")
+//     },3000))
+// }
 
-getUser()
+// getUser().then( user => {
+//     console.log(user);
+//     return confirmOrder()
+// })
+// .then(order => {
+//     console.log(order);
+//     return deliverOrder();
+// })
+// .then(delivery => {
+//     console.log(delivery)
+// })
+// .catch(err => {
+//     console.log("Error" , err)
+// })
+// .finally( () =>{
+//     console.log("Process Complete")
+// })
+
+
+
+// Convert the same logic to async/await.
+
+
+// function getUser() {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve("User fetched successfully"), 1000)
+//   );
+// }
+
+// function confirmOrder() {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve("Order confirmed successfully"), 2000)
+//   );
+// }
+
+// function deliverOrder() {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve("Order delivered successfully"), 3000)
+//   );
+// }
+
+// async function processOrder() {
+//   try {
+//     console.log("Starting order process...");
+
+//     const user = await getUser();
+//     console.log(user);
+
+//     const order = await confirmOrder();
+//     console.log(order);
+
+//     const delivery = await deliverOrder();
+//     console.log(delivery);
+
+//     console.log("All steps completed successfully!");
+//   } catch (error) {
+//     console.log(" Error:", error);
+//   } finally {
+//     console.log("Process Complete (finally block executed)");
+//   }
+// }
+
+// processOrder();
+
+
+
+
+// Create a flow:  getUser() → getOrders() → getInvoice()   Use chaining and then async/await versions.
+
+// function getUser() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve({ id: 1, name: "Waqas" }), 1000);
+//   });
+// }
+
+// function getOrders(userId) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve(["Order1", "Order2"]), 1500);
+//   });
+// }
+
+// function getInvoice(order) {
+//   return new Promise((resolve) => {
+//     setTimeout(() => resolve(`Invoice generated for ${order}`), 1000);
+//   });
+// }
+
+// // Promise chaining
+// getUser()
+//   .then((user) => {
+//     console.log("User fetched:", user.name);
+//     return getOrders(user.id);
+//   })
+//   .then((orders) => {
+//     console.log("Orders fetched:", orders);
+//     return getInvoice(orders[0]);
+//   })
+//   .then((invoice) => {
+//     console.log(invoice);
+//   })
+//   .catch((err) => console.log("Error:", err))
+//   .finally(() => console.log("Process Complete"));
+
+
+
+//   // Async await version  
+
+//   async function processOrder() {
+//   try {
+//     console.log("Fetching user...");
+//     const user = await getUser();
+
+//     console.log("Fetching orders for:", user.name);
+//     const orders = await getOrders(user.id);
+
+//     console.log("Generating invoice for:", orders[0]);
+//     const invoice = await getInvoice(orders[0]);
+
+//     console.log(invoice);
+//   } catch (err) {
+//     console.log("Error:", err);
+//   } finally {
+//     console.log("Process Complete");
+//   }
+// }
+
+// processOrder();
+
+
+// Make a retry system that Fails API with many tries
+
+// function fakeApi(){
+//     return new Promise((resolve , reject) => {
+//         let success = Math.random() > 0.5 ;
+//         setTimeout(() =>{
+//             if (success) {
+//                 resolve("Fetch Api successfuly");
+//             }
+//             else 
+//                 reject("Fail to fetch Api");
+//         },1000)
+//     })
+// }
+
+// async function callApi(retry = 3){
+// for(let i=0 ; i < retry ; i++){
+//     try {
+//         let api = await fakeApi();
+//         console.log(api)
+//         return;
+//     } catch (error) {
+//         console.log(`Failed to Attemp ${i+1} Retrying...`)
+//     }
+// }
+// console.log("All failed")
+// }
+// callApi();
+
+
+// Try running same tasks with Promise.allSettled() — print which succeeded/failed.
