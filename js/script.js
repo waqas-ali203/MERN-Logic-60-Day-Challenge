@@ -709,7 +709,6 @@
 // }
 // getData();
 
-
 // Chain 3 async operations (user → orders → order details) using async/await.
 
 // function getUser() {
@@ -731,7 +730,7 @@
 // async function showUserOrderDetail() {
 //     console.log("Order Detail Fetching.....");
 //     const user = await getUser();
-    
+
 //     console.log("Fetching Order for" , user.name);
 //     const order = await getOrder(user.id);
 
@@ -741,12 +740,9 @@
 // }
 // showUserOrderDetail();
 
-
-
 // DAY 12 — JavaScript Error Handling + Debugging (try...catch, throw, finally, console tools)
 
 // (try , catch , finally , throw )  it is done in up code
-
 
 // Debugging means finding and fixing errors in your code.
 
@@ -757,8 +753,6 @@
 // Browser Developer Tools → Sources → “Add breakpoint”
 
 // Use debugger; keyword to pause execution manually
-
-
 
 // Write code that tries to divide two numbers and catches divide-by-zero error.
 
@@ -775,7 +769,6 @@
 //     console.log("erro" , error.message)
 // }
 
-
 // Create a function parseJSON(str) that safely parses JSON and catches syntax errors.
 
 // function parseJSON(str){
@@ -787,8 +780,6 @@
 //     }
 // }
 // parseJSON('{"name":"waqas" , "age" : 23}')
-
-
 
 // Day 13 — JavaScript: Async/Await + Error Handling
 
@@ -805,7 +796,6 @@
 //     console.log(user);
 // }
 // tryDowloand();
-
 
 // simulate an API call that fails 50% of the time (randomly).
 
@@ -832,7 +822,6 @@
 // }
 // getApi();
 
-
 // Run 2 async tasks (taskA = 2s, taskB = 3s) together using Promise.all().
 
 // function task1(){
@@ -853,9 +842,7 @@
 // }
 // all_Promise();
 
-
 // Create fakeLogin() that sometimes rejects. Use finally() to always print "Session Ended".
-
 
 //  function fakeLogin(){
 //     return new Promise((resolve , reject) => setTimeout(()=>{
@@ -883,31 +870,51 @@
 // }
 // getApi();
 
-
-
 // Chain 2 async functions — getUser() and getPosts() — where second waits for the first.
 
+// async function getUser(){
+//     return new Promise(resolve => setTimeout(() =>{
+//         resolve({id : 1 , name : "waqas"})
+//     },2000))
+// }
 
-async function getUser(){
-    return new Promise(resolve => setTimeout(() =>{
-        resolve({id : 1 , name : "waqas"})
-    },2000))
+// async function getPost(userId){
+//     return new Promise(resolve => setTimeout(() =>{
+//         resolve(["Post1" , "Post2" , "Post3"])
+//     },3000))
+// }
+
+// async function showUserPost() {
+//     console.log("Fetching User.....");
+//     let user = await getUser();
+//     console.log("Wait for user" , user.name);
+
+//     console.log("Fetching User Post" , user.name);
+//     let userPost = await getPost(user.id);
+//     console.log("Post" , userPost)
+// }
+
+// showUserPost();
+
+// Day 14 — JavaScript: Promise Chaining + Real-World Async Flow
+
+// Create 3 promises that resolve at different times. Chain them one after another using .then().
+
+
+function getUser(){
+    return new Promise((resolve) => setTimeout((){
+        resolve("Get User successfully")
+    },1000))
+}
+function confirmOrder(){
+    return new Promise((resolve) => setTimeout((){
+        resolve("Fetch Order Successfully")
+    },1000))
+}
+function deliverOrder(){
+    return new Promise((resolve) => setTimeout((){
+        resolve("GDeliver Order successfully")
+    },1000))
 }
 
-async function getPost(userId){
-    return new Promise(resolve => setTimeout(() =>{
-        resolve(["Post1" , "Post2" , "Post3"])
-    },3000))
-}
-
-async function showUserPost() {
-    console.log("Fetching User.....");
-    let user = await getUser();
-    console.log("Wait for user" , user.name);
-
-    console.log("Fetching User Post" , user.name);
-    let userPost = await getPost(user.id);
-    console.log("Post" , userPost)
-}
-
-showUserPost();
+getUser()
