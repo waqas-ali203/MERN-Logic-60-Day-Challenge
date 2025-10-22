@@ -1067,29 +1067,123 @@
 
 // Try running same tasks with Promise.allSettled() — print which succeeded/failed.
 
-function task1() {
-  return new Promise((resolve) =>
-    setTimeout(() => resolve("Task 1  Done"), 1000)
-  );
-}
+// function task1() {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve("Task 1  Done"), 1000)
+//   );
+// }
 
-function task2() {
-  return new Promise((resolve , reject) =>
-    setTimeout(() => reject("Task 2  Failed"), 1500)
-  );
-}
+// function task2() {
+//   return new Promise((resolve , reject) =>
+//     setTimeout(() => reject("Task 2  Failed"), 1500)
+//   );
+// }
 
-function task3() {
-  return new Promise((resolve) =>
-    setTimeout(() => resolve("Task 3  Done"), 2000)
-  );
-}
-Promise.allSettled([task1(), task2() , task3()]).then(results => results.forEach((result_value , index) =>{
-    if(result_value.status === "fulfilled"){
-        console.log(`Task ${index + 1} : Succeess ${result_value.value} `)
-    }
-    else{
-        console.log(`Task ${index + 1} : Failed ${result_value.reason}`)
-    }
-}) )
-.finally(() =>{console.log("All task completed")})
+// function task3() {
+//   return new Promise((resolve) =>
+//     setTimeout(() => resolve("Task 3  Done"), 2000)
+//   );
+// }
+// Promise.allSettled([task1(), task2() , task3()]).then(results => results.forEach((result_value , index) =>{
+//     if(result_value.status === "fulfilled"){
+//         console.log(`Task ${index + 1} : Succeess ${result_value.value} `)
+//     }
+//     else{
+//         console.log(`Task ${index + 1} : Failed ${result_value.reason}`)
+//     }
+// }) )
+// .finally(() =>{console.log("All task completed")})
+
+
+// Day 15 — JavaScript Error Handling + Debugging + Practice Problems
+
+// Create a function that accepts only strings — if not a string, throw a custom error.
+
+// function checkString(input){
+//     try {
+//         if(typeof input !== "string"){
+
+//             throw new Error(`Value is not a string value ${input}`);
+//         }
+//         console.log("Valid string : " , input)
+//     } catch (error) {
+//         console.log("Error" , error.message)
+//     }
+//     finally{
+//         console.log("Program resolve")
+//     }
+// }
+// checkString("Hello");
+// checkString(123)
+
+// Throw an error if the user input is an empty string "".
+
+// function validateInput(str) {
+//   try {
+//     if (str === "") {
+//       throw new Error("Input cannot be empty!");
+//     }
+//     console.log("Input accepted:", str);
+//   } catch (err) {
+//     console.error("Error:", err.message);
+//   } finally {
+//     console.log("Program completed\n");
+//   }
+// }
+// validateInput("Waqas");
+// validateInput("");
+
+
+// Use the debugger keyword inside a function and test it in the browser console.
+
+// function testDebugger() {
+//   let x = 10;
+//   let y = 20;
+//   debugger; //  Pause code execution here (test in browser console)
+//   console.log("Sum =", x + y);
+// }
+// testDebugger();
+
+
+// Identify and catch a TypeError and ReferenceError separately using instanceof.
+
+// try {
+//   let num = 10;
+//   num.toUpperCase(); //  TypeError
+// } catch (err) {
+//   if (err instanceof TypeError) {
+//     console.error("Caught a TypeError:", err.message);
+//   } else if (err instanceof ReferenceError) {
+//     console.error("Caught a ReferenceError:", err.message);
+//   } else {
+//     console.error("Other Error:", err.message);
+//   }
+// } finally {
+//   console.log("Program completed\n");
+// }
+
+
+// Create a custom ValidationError class and throw it when invalid input is detected.
+
+// class Validationerror extends Error {
+//     constructor(message) {
+//         super(message);
+//         this.name = "Validationerror";
+//     }
+// }
+// function validateUserInput(input) {
+//   try {
+//     if (typeof input !== "string" || input.trim() === "") {
+//       throw new ValidationError("Invalid input — must be a non-empty string");
+//     }
+//     console.log(" Valid input:", input);
+//   } catch (err) {
+//     console.error(`${err.name}: ${err.message}`);
+//   } finally {
+//     console.log("Program completed\n");
+//   }
+// }
+
+// validateUserInput("Waqas");
+// validateUserInput("");
+// validateUserInput(25)
