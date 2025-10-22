@@ -900,7 +900,6 @@
 
 // Create 3 promises that resolve at different times. Chain them one after another using .then().
 
-
 // function getUser(){
 //     return new Promise((resolve) => setTimeout(() => {
 //         resolve("Get User successfully")
@@ -935,10 +934,7 @@
 //     console.log("Process Complete")
 // })
 
-
-
 // Convert the same logic to async/await.
-
 
 // function getUser() {
 //   return new Promise((resolve) =>
@@ -981,9 +977,6 @@
 
 // processOrder();
 
-
-
-
 // Create a flow:  getUser() → getOrders() → getInvoice()   Use chaining and then async/await versions.
 
 // function getUser() {
@@ -1020,9 +1013,7 @@
 //   .catch((err) => console.log("Error:", err))
 //   .finally(() => console.log("Process Complete"));
 
-
-
-//   // Async await version  
+//   // Async await version
 
 //   async function processOrder() {
 //   try {
@@ -1045,7 +1036,6 @@
 
 // processOrder();
 
-
 // Make a retry system that Fails API with many tries
 
 // function fakeApi(){
@@ -1055,7 +1045,7 @@
 //             if (success) {
 //                 resolve("Fetch Api successfuly");
 //             }
-//             else 
+//             else
 //                 reject("Fail to fetch Api");
 //         },1000)
 //     })
@@ -1075,5 +1065,31 @@
 // }
 // callApi();
 
-
 // Try running same tasks with Promise.allSettled() — print which succeeded/failed.
+
+function task1() {
+  return new Promise((resolve) =>
+    setTimeout(() => resolve("Task 1  Done"), 1000)
+  );
+}
+
+function task2() {
+  return new Promise((resolve , reject) =>
+    setTimeout(() => reject("Task 2  Failed"), 1500)
+  );
+}
+
+function task3() {
+  return new Promise((resolve) =>
+    setTimeout(() => resolve("Task 3  Done"), 2000)
+  );
+}
+Promise.allSettled([task1(), task2() , task3()]).then(results => results.forEach((result_value , index) =>{
+    if(result_value.status === "fulfilled"){
+        console.log(`Task ${index + 1} : Succeess ${result_value.value} `)
+    }
+    else{
+        console.log(`Task ${index + 1} : Failed ${result_value.reason}`)
+    }
+}) )
+.finally(() =>{console.log("All task completed")})
